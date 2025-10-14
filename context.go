@@ -175,6 +175,10 @@ func (ctx *Context) GetHeader(key string) string {
 	return ctx.Response().GetHeader(key)
 }
 
+func (ctx *Context) DelHeader(key string) {
+	ctx.Response().DelHeader(key)
+}
+
 // Status sets the HTTP status code for the response and returns an error if it fails.
 func (ctx *Context) Status(code int) error {
 	if code < 100 || code > 999 {
