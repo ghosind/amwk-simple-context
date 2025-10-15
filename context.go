@@ -175,6 +175,7 @@ func (ctx *Context) GetHeader(key string) string {
 	return ctx.Response().GetHeader(key)
 }
 
+// DelHeader removes a header from the response.
 func (ctx *Context) DelHeader(key string) {
 	ctx.Response().DelHeader(key)
 }
